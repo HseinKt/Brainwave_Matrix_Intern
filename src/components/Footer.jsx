@@ -1,9 +1,10 @@
 const Footer = () => {
     return ( 
-        <Footer>
-            Footer
-            <p>© 2023 Your Company Name. All rights reserved.</p>
-        </Footer>
+        <>
+            <footer className="footer">
+                <p>Welcome to the Budget Tracker App! 🚀</p>
+            </footer>
+        </>
      );
 }
  
