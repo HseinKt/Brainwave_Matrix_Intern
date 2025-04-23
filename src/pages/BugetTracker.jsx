@@ -1,10 +1,27 @@
 import { Link } from 'react-router-dom';
 import '../CSS/BugetTracker.css';
-import Expenses from '../components/Expenses';
-import List_of_expenses from '../components/list_of_expenses';
-import Chart_of_expenses from '../components/Chart_of_expenses';
+import { useState } from 'react';
+import ExpenseChart from '../components/ExpenseChart';
+import ExpenseList from '../components/ExpenseList';
+import ExpenseForm from '../components/ExpenseForm';
+import BudgetInput from '../components/BudgetInput';
+import BudgetSummary from '../components/BudgetSummary';
 
 const BugetTracker = () => {
+    const [budget, setBudget] = useState('');
+    const [expenses, setExpenses] = useState([]);
+
+    const handleAddExpense = (expense) => {
+        setExpenses([...expenses, expense]);
+    }
+
+    const handleDeleteExpense = (id) => {
+        const updatedExpenses = expenses.filter(expense => expense-id != id);
+        setExpenses(updatedExpenses);
+    }
+
+    const remaining = budget - expenses.reduce((acc, expense) => acc - expense.amount, budget);
+
     return ( 
         <div className="budget-tracker-container">
 
@@ -16,15 +33,17 @@ const BugetTracker = () => {
 
             <div className="budget-tracker-expenses">
                 <div className="budget-tracker-data">
-                    <Expenses/>
+                    <BudgetInput budget={budget} setBudget={setBudget}/>
+                    <ExpenseForm handleAddExpense={handleAddExpense}/>
                 </div>
 
                 <div className="budget-tracker-list">
-                    <List_of_expenses/>
+                    <ExpenseList expenses={expenses} handleDeleteExpense={handleDeleteExpense}/>
+                    <BudgetSummary budget={budget} remaining={remaining}/>
                 </div>
 
                 <div className="budget-tracker-chart">
-                    <Chart_of_expenses/>
+                    <ExpenseChart expenses={expenses}/>
                 </div>
             </div>
         </div>
