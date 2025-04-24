@@ -1,8 +1,16 @@
-const BudgetInput = () => {
+const BudgetInput = (props) => {
+
     return ( 
-        <>
-            <h2>BudgetInput</h2>
-        </>
+        <div className="budget-input-container">
+            <input 
+                type="number" 
+                placeholder="Enter your budget"
+                value={props.budget}
+                onChange={(e) => props.setBudget(e.target.value)}
+                min={0}
+            />
+            <p>Your Pudget is {props.budget} Dollars</p>
+        </div>
      );
 }
  

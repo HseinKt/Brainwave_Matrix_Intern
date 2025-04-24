@@ -4,30 +4,39 @@
   --body-color: rgb(250, 250, 250);
   --color-white: rgb(255, 255, 255);
 
-  --text-color-second: rgb(68, 68, 68); 
-  --text-color-third: rgb(30, 159, 171);
-  --text-color-fourth: #777;
+  /* --text-color-second: rgb(68, 68, 68); 
+  --text-color-third: rgb(2, 68, 223);
+  --text-color-fourth: #777; */
 
   --first-color: rgb(110, 87, 224);
-  --first-color-hover: rgb(40, 91, 212);
+  --first-color-hover: rgb(30, 159, 171);
 
   --second-color: rgb(0, 201, 255);
-  --third-color: rgb(192, 166, 49);
+  --third-color: rgb(2, 68, 223);
+  --fourth-color: #6200ea;
+  --fourth-hover-color: #3700b3;
+  --fifth-color: rgb(192, 166, 49);
   --first-shadow-color: rgba(0, 0, 0, 0.1);
-  --text-color-input: rgb(0, 0, 0);
+  --text-color-input: #777;
 
   --dark-mode-bg: #181818;
   --dark-mode-text: #FFFFFF;
   
   --nav-bg: rgba(30, 30, 30, 0.9);
 
-  --button-bg: #007bff;
-  --button-text: #fff;
-  --btn-color: #6200ea;
-  --btn-hover-color: #3700b3;
+  --btn-text: #fff;
+  --btn-color: #007bff;
+  --btn-hover-color: #0067d4;
 
   --padding-inline: 6vw;
   --padding-page: 3vw;
+
+  --border-color: rgb(192, 188, 188);
+  --font-weight-label: 500;
+  --font-size-label: 16px;
+  --font-size-input: 14px;
+  --font-size-title: 24px;
+  --font-size-subtitle: 20px;
 }
 *{
   margin: 0;
@@ -59,7 +68,7 @@ body {
 .btn{
   font-weight: 500;
   padding: 12px 20px;
-  background: var(--btn-color);
+  background: var(--fourth-color);
   color: var(--color-white);
   border: none;
   border-radius: 10px;
@@ -67,7 +76,7 @@ body {
   transition: .4s;
 }
 .btn:hover{
-  background: var(--btn-hover-color);
+  background: var(--fourth-hover-color);
 }
 
 .not-found {
