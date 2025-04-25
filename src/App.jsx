@@ -2,7 +2,6 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import BugetTracker from './pages/BugetTracker'
-import Footer from './components/Footer'
 
 function App() {
 
@@ -17,8 +16,6 @@ function App() {
           </Routes>
         </main>
       </Router>
-
-      <Footer/>
     </div>
   )
 }

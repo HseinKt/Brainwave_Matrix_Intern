@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import '../CSS/BugetTracker.css';
 import '../CSS/List.css';
-import '../CSS/Chart.css';
 import '../CSS/Expenses.css';
-import { useEffect, useState } from 'react';
 import ExpenseChart from '../components/ExpenseChart';
 import ExpenseList from '../components/ExpenseList';
 import ExpenseForm from '../components/ExpenseForm';
