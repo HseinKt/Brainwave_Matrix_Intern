@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import '../CSS/BugetTracker.css';
+import '../CSS/List.css';
+import '../CSS/Chart.css';
+import '../CSS/Expenses.css';
 import { useEffect, useState } from 'react';
 import ExpenseChart from '../components/ExpenseChart';
 import ExpenseList from '../components/ExpenseList';
@@ -26,7 +29,6 @@ const BugetTracker = () => {
         setExpenses(expenses.filter((_, i) => i !== id));
     }
 
-    // const remaining = budget - expenses.reduce((acc, expense) => acc + expense.amount, budget);
     const totalSpent = expenses.reduce((acc, exp) => acc + Number(exp.amount), 0);
     const remaining = budget - totalSpent;
 
@@ -51,9 +53,6 @@ const BugetTracker = () => {
                 <div className="budget-tracker-data">
                     <BudgetInput budget={budget} setBudget={setBudget}/>
                     <ExpenseForm handleAddExpense={handleAddExpense}/>
-                    {/* <p>{expenses[0].name}</p>
-                    {console.log(expenses[0].name)} */}
-                    
                 </div>
 
                 <div className="budget-tracker-list">
