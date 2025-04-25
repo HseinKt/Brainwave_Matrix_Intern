@@ -8,10 +8,14 @@ import BudgetInput from '../components/BudgetInput';
 import BudgetSummary from '../components/BudgetSummary';
 
 const BugetTracker = () => {
-    const [expenses, setExpenses] = useState([]);
     const [budget, setBudget] = useState(() => {
         const savedBudget = localStorage.getItem('budget');
         return savedBudget ? Number(savedBudget) : '';
+    });
+
+    const [expenses, setExpenses] = useState(() => {
+        const savedExpenses = localStorage.getItem('expenses');
+        return savedExpenses ? JSON.parse(savedExpenses) : [];
     });
 
     const handleAddExpense = (expense) => {
@@ -19,15 +23,20 @@ const BugetTracker = () => {
     }
 
     const handleDeleteExpense = (id) => {
-        const updatedExpenses = expenses.filter(expense => expense-id != id);
-        setExpenses(updatedExpenses);
+        setExpenses(expenses.filter((_, i) => i !== id));
     }
 
-    const remaining = budget - expenses.reduce((acc, expense) => acc - expense.amount, budget);
+    // const remaining = budget - expenses.reduce((acc, expense) => acc + expense.amount, budget);
+    const totalSpent = expenses.reduce((acc, exp) => acc + Number(exp.amount), 0);
+    const remaining = budget - totalSpent;
 
     useEffect(() => {
         localStorage.setItem('budget', budget);
     }, [budget]);
+    
+    useEffect(() => {
+        localStorage.setItem('expenses', JSON.stringify(expenses));
+    }, [expenses]);
     
     return ( 
         <div className="budget-tracker-container">

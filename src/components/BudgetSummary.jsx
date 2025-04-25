@@ -1,8 +1,9 @@
-const BudgetSummary = () => {
+const BudgetSummary = (props) => {
     return ( 
-        <>
-            <h2>BudgetSummary</h2> 
-        </>
+        <div className="budget-summary">
+            <div className="budget"> <strong>Budget:</strong> {props.budget.toLocaleString()} </div>
+            <div className="remaining"> <strong>Left:</strong> {props.remaining.toLocaleString()} </div>
+        </div>
      );
 }
  
