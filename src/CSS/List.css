@@ -65,6 +65,7 @@
 .expense-list button:hover {
     text-shadow: 0 0 5px var(--fifth-color);
 }
+
 .budget-summary {
     margin-top: 20px;
     text-align: center;
@@ -81,4 +82,13 @@
 .remaining {
     background-color: #c8e6c9;
     color: #1b5e20;
+}
+.reset_button {
+    margin-left: 23vw;
+    margin-top: 15px;
+}
+.trashCan {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }

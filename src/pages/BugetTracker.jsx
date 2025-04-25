@@ -28,6 +28,13 @@ const BugetTracker = () => {
         setExpenses(expenses.filter((_, i) => i !== id));
     }
 
+    const handleResetExpense = () => {
+        setBudget('');
+        setExpenses([]);
+        localStorage.removeItem('budget');
+        localStorage.removeItem('expenses');
+    }
+
     const totalSpent = expenses.reduce((acc, exp) => acc + Number(exp.amount), 0);
     const remaining = budget - totalSpent;
 
@@ -56,7 +63,7 @@ const BugetTracker = () => {
 
                 <div className="budget-tracker-list">
                     <ExpenseList expenses={expenses} handleDeleteExpense={handleDeleteExpense}/>
-                    <BudgetSummary budget={budget} remaining={remaining}/>
+                    <BudgetSummary budget={budget} remaining={remaining} onReset={handleResetExpense}/>
                 </div>
 
                 <div className="budget-tracker-chart">

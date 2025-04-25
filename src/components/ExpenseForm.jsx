@@ -7,11 +7,6 @@ const ExpenseForm = ({handleAddExpense}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const expense = {
-        //     id: Math.floor(Math.random() * 10000),
-        //     name: name,
-        //     amount: Number(amount)
-        // }
         if(!name || !amount) return;
         handleAddExpense({name, amount});
         setName('');
@@ -39,7 +34,9 @@ const ExpenseForm = ({handleAddExpense}) => {
                 min={0}
             />
 
-            <button type="submit">Add</button>
+            <div className="submit-button">
+                <button type="submit">Add</button>
+            </div>
         </form>
      );
 }
