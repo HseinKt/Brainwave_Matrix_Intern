@@ -1,0 +1,10 @@
+.expense-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    margin: auto;
+    max-width: 400px;
+}
