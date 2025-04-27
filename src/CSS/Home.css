@@ -29,3 +29,9 @@
     padding: 10px 20px;
     margin: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+    .home-header {
+        font-size: small;
+    }
+}

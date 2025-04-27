@@ -92,3 +92,11 @@
     height: 40px;
     cursor: pointer;
 }
+@media only screen and (max-width: 768px) {
+    .expense-list {
+        max-height: 44vh;
+    }
+    .reset_button {
+        margin-right: 20vw;
+    }
+}

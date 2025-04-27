@@ -37,3 +37,19 @@
     margin: auto;
     max-width: 400px;
 }
+
+@media only screen and (max-width: 768px) {
+    .budget-tracker-title h1 {
+        font-size: 25px;
+    }
+    .budget-tracker-expenses {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .budget-tracker-data,
+    .budget-tracker-list,
+    .budget-tracker-chart {
+        flex: 1;
+        width: 100%;
+    }
+}
