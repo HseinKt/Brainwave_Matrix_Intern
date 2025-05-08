@@ -1,12 +1,60 @@
-# React + Vite
+# 💰 Budget Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Track your daily expenses, set a budget, and visualize your spending easily.
 
-Currently, two official plugins are available:
+## 🌟 Live Demo
+🔗 [View budget-tracker-app]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Add and delete expenses
+- ✅ Budget summary with remaining calculation
+- ✅ Pie chart visualization of expenses
+- ✅ Responsive design (mobile-friendly)
+- ✅ Animations & Transitions using Framer Motion.
+- ✅ Persistent storage using localStorage
+- ✅ Clean and simple UI
+
+
+## 🛠️ Tech Stack
+
+- **React.js**
+- **Chart.js** (via `react-chartjs-2`)
+- **Framer Motion** (optional animation)
+- **CSS Modules**
+- **LocalStorage** for persistent state
+
+
+## 🧠 React Concepts Used
+
+- `useState` for managing form and budget states
+- `useEffect` for syncing data with localStorage
+- `props` for component communication
+
+
+## 📊 Beautiful & Easy Chart Integration
+
+The app uses `react-chartjs-2` and `Chart.js` to build a simple and visually rich pie chart. With just a few lines of code and smart use of colors, you can turn budget data into an interactive pizza-slice-style chart — perfect for quick visual insights.
+
+
+![Budget Tracker Screenshot](public/Screenshot.png)
+
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/HseinKt/budget-tracker-app.git
+```
+cd budget-tracker-app
+
+## 📬 Contact
+Feel free to connect with me:
+- 📧 Email: hseinkteish21@gmail.com
+- 💼 LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/hussein-kteish-287783212/)
+- 🐙 GitHub: [Your GitHub](https://github.com/HseinKt)
+
+💡 **Made with ❤️ & React.js**
+
