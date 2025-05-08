@@ -3,7 +3,7 @@
 Track your daily expenses, set a budget, and visualize your spending easily.
 
 ## 🌟 Live Demo
-🔗 [View budget-tracker-app]()
+🔗 [View budget-tracker-app](https://HseinKt.github.io/budget-tracker-app)
 
 
 ## ✨ Features
@@ -24,13 +24,6 @@ Track your daily expenses, set a budget, and visualize your spending easily.
 - **Framer Motion** (optional animation)
 - **CSS Modules**
 - **LocalStorage** for persistent state
-
-
-## 🧠 React Concepts Used
-
-- `useState` for managing form and budget states
-- `useEffect` for syncing data with localStorage
-- `props` for component communication
 
 
 ## 📊 Beautiful & Easy Chart Integration

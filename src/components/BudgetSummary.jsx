@@ -10,7 +10,7 @@ const BudgetSummary = (props) => {
                 transition={{ duration: 0.3 }}
             >
                 <button onClick={props.onReset}>
-                    <img src="/trash-can_5909516.png" alt="trashCan" className="trashCan" />
+                    <img src="public/trash-can_5909516.png" alt="trashCan" className="trashCan" />
                 </button>
             </motion.div>
         </div>
